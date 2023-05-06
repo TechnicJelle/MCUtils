@@ -15,6 +15,11 @@ import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 
 public class MCUtils {
+
+	private MCUtils() {
+		throw new IllegalStateException("Utility class");
+	}
+
 	/**
 	 * Copies any resource from your plugin's resource folder in the jar, to your plugin's config folder.
 	 *
