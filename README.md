@@ -17,7 +17,7 @@ copyPluginResourceToConfigDir(plugin, String fromResource, String toConfigFile, 
 ### Download image from URL
 This function downloads an image from a URL and returns the image as a BufferedImage.
 ```java
-downloadImage(String)
+downloadImage(String);
 downloadImage​(URL)
 ```
 
