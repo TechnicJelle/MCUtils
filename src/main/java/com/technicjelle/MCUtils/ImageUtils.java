@@ -19,6 +19,8 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 
 /**
@@ -37,8 +39,8 @@ public class ImageUtils {
 	 */
 	public static @Nullable BufferedImage downloadImage(@NotNull String url) {
 		try {
-			return downloadImage(new URL(url));
-		} catch (IOException e) {
+			return downloadImage(new URI(url).toURL());
+		} catch (IOException | URISyntaxException e) {
 			return null;
 		}
 	}
